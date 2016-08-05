@@ -1,0 +1,86 @@
+#should be safe to use existing duplicate removal, even with hundreds of negative constraints
+#what to do about spaces?  exclude those cities, or only search tags, or use AND
+#spaces would screw up the negative constraints.  We should just eliminate all spaces-
+#searching for "washingtondc" finds images tagged "washington dc"
+#however, "washingtondc -washington" does not return any images tagged "washington dc", only "washingtondc"
+#"mexicocity -mexico" works very badly
+#"mexico -mexicocity" works as desired, though.  Or "washington -washingtondc"
+#"newmexico -mexico" will cause problems.
+#so we need to query from specific to general, cities, then states, then countries
+#need to query west virginia before virginia
+
+#metro areas, by population, top 100, decreasing
+sunset
+beach
+water
+nature
+night
+tree
+dog
+cat
+winter
+park
+street
+landscape
+summer
+trees
+sea
+city
+yellow
+lake
+bridge
+people
+river
+# 20 skipped house, too long.
+house
+car
+new
+garden
+party
+
+#negative queries.  should these be restricted to tags only?
+-birthday
+-portrait
+-bw
+-abstract
+-macro
+-wedding
+-fun
+-kid
+-child
+-children
+-graffiti
+-prom
+-concert
+-nude
+-fraternity
+-frat
+-gay
+-lesbian
+-live
+-baby
+-sex
+
+#-man
+#man is questionable.  definitely only use in a tag search.
+#-woman
+#-women
+#-girl
+#-lady
+#-boy
+#-guy
+#-me
+#-indoors
+#-party
+#-parties
+#-people
+#people hits too many good images.  but I dont care right now
+#-friend
+#-family
+#-dog
+#-cat
+#-face
+#-cameraphone
+#-stilllife
+
+# need trailing comment for python to read the last real line
