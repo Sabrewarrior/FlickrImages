@@ -42,7 +42,7 @@ def url2imageArray(urlReq, timeout = 10, timeoutDelta = 5, maxtries = 3):
 ###
 ### resizeDims = (width, height)
 ###
-def normalizeArray(imageArray, resizeDims = (277,277), RGBtoBW = False):
+def normalizeArray(imageArray, resizeDims = (224,224), RGBtoBW = False):
     dims = imageArray.size
     normArray = None
     landscape = "True"
